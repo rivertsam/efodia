@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Τι να πάρω στην εκδρομή; – Λίστα υλικών προσκόπων</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #1f4d3a;
+      --forest-2: #2e6b52;
+      --moss: #e7efe6;
+      --khaki: #f6f1e4;
+      --sand: #e9dfc6;
+      --ink: #1d2621;
+      --muted: #5d6b63;
+      --accent: #d97b29;
+      --line: #d9d2bd;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: "Commissioner", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--khaki);
+      line-height: 1.45
+    }
+
+    header {
+      background: var(--forest);
+      color: #fff;
+      padding: 36px 20px 70px;
+      text-align: center;
+      position: relative;
+      overflow: hidden
+    }
+
+    header h1 {
+      margin: 0 0 6px;
+      font-size: clamp(26px, 5vw, 40px);
+      font-weight: 800;
+      letter-spacing: -.5px
+    }
+
+    header p {
+      margin: 0;
+      opacity: .85;
+      font-size: 17px
+    }
+
+    header svg.mtn {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      width: 100%;
+      height: 60px
+    }
+
+    .wrap {
+      max-width: 860px;
+      margin: -30px auto 40px;
+      padding: 0 16px;
+      position: relative
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px rgba(31, 77, 58, .10);
+      padding: 22px;
+      margin-bottom: 18px
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 19px;
+      color: var(--forest)
+    }
+
+    .q {
+      margin-bottom: 18px
+    }
+
+    .q:last-child {
+      margin-bottom: 0
+    }
+
+    .q-label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: block
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .chip {
+      border: 2px solid var(--line);
+      background: #fff;
+      border-radius: 999px;
+      padding: 9px 16px;
+      font: inherit;
+      font-size: 15px;
+      cursor: pointer;
+      transition: .15s;
+      color: var(--ink)
+    }
+
+    .chip:hover {
+      border-color: var(--forest-2)
+    }
+
+    .chip[aria-pressed="true"] {
+      background: var(--forest);
+      border-color: var(--forest);
+      color: #fff
+    }
+
+    .progress-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: space-between
+    }
+
+    .bar {
+      flex: 1;
+      min-width: 160px;
+      height: 12px;
+      background: var(--moss);
+      border-radius: 999px;
+      overflow: hidden
+    }
+
+    .bar>div {
+      height: 100%;
+      background: var(--accent);
+      width: 0;
+      transition: width .3s
+    }
+
+    .count {
+      font-weight: 600;
+      color: var(--forest);
+      white-space: nowrap
+    }
+
+    .tools {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      border: none;
+      background: var(--moss);
+      color: var(--forest);
+      font: inherit;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 9px 14px;
+      border-radius: 10px;
+      cursor: pointer
+    }
+
+    .btn:hover {
+      background: var(--sand)
+    }
+
+    .cat {
+      margin-top: 18px
+    }
+
+    .cat h3 {
+      font-size: 16px;
+      margin: 0 0 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--forest)
+    }
+
+    .cat h3 .n {
+      font-weight: 400;
+      color: var(--muted);
+      font-size: 13px
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0
+    }
+
+    li label {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 10px;
+      border-radius: 10px;
+      cursor: pointer
+    }
+
+    li label:hover {
+      background: var(--khaki)
+    }
+
+    li input {
+      width: 20px;
+      height: 20px;
+      margin-top: 1px;
+      accent-color: var(--forest);
+      flex-shrink: 0
+    }
+
+    li .t {
+      flex: 1
+    }
+
+    li .note {
+      display: block;
+      font-size: 13px;
+      color: var(--muted)
+    }
+
+    li.done .t>span:first-child {
+      text-decoration: line-through;
+      color: var(--muted)
+    }
+
+    li .del {
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 18px;
+      padding: 0 4px
+    }
+
+    .ztag {
+      display: inline-block;
+      margin: 3px 0 0 8px;
+      vertical-align: 1px;
+      font-size: 12px;
+      color: var(--forest-2);
+      background: var(--moss);
+      border: none;
+      border-radius: 999px;
+      padding: 2px 9px;
+      cursor: pointer;
+      font-family: inherit
+    }
+
+    .ztag:hover {
+      background: var(--sand)
+    }
+
+    .add {
+      display: flex;
+      gap: 8px;
+      margin-top: 10px
+    }
+
+    .add input {
+      flex: 1;
+      border: 2px solid var(--line);
+      border-radius: 10px;
+      padding: 9px 12px;
+      font: inherit
+    }
+
+    .add input:focus {
+      outline: none;
+      border-color: var(--forest-2)
+    }
+
+    .tip {
+      background: var(--moss);
+      border-left: 4px solid var(--forest-2);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 14.5px
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: var(--forest);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 999px;
+      transition: .25s;
+      font-size: 14px;
+      z-index: 10
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0)
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 0 16px 30px
+    }
+
+    /* ---------- Backpack ---------- */
+    .pack-grid {
+      display: grid;
+      grid-template-columns: minmax(220px, 300px) 1fr;
+      gap: 22px;
+      align-items: start
+    }
+
+    @media (max-width:640px) {
+      .pack-grid {
+        grid-template-columns: 1fr
+      }
+
+      .stage {
+        max-width: 280px;
+        margin: 0 auto
+      }
+    }
+
+    .stage {
+      position: relative;
+      background: radial-gradient(circle at 50% 40%, #fbf8ef 0, #efe7d2 75%);
+      border-radius: 18px;
+      padding: 10px 6px 4px;
+      overflow: hidden
+    }
+
+    .stage svg {
+      display: block;
+      width: 100%;
+      height: auto
+    }
+
+    .fx {
+      position: absolute;
+      inset: 0;
+      pointer-events: none
+    }
+
+    .fx span {
+      position: absolute;
+      font-size: 26px;
+      left: 0;
+      top: 0;
+      will-change: transform, opacity
+    }
+
+    #sway {
+      transform-origin: 160px 385px;
+      animation: sway 4.5s ease-in-out infinite
+    }
+
+    @keyframes sway {
+
+      0%,
+      100% {
+        transform: rotate(-1.6deg)
+      }
+
+      50% {
+        transform: rotate(1.6deg)
+      }
+    }
+
+    #bump.go {
+      animation: bump .45s ease-out
+    }
+
+    @keyframes bump {
+      0% {
+        transform: scale(1, 1)
+      }
+
+      30% {
+        transform: translateY(6px) scale(1.04, .95)
+      }
+
+      60% {
+        transform: translateY(-4px) scale(.98, 1.03)
+      }
+
+      100% {
+        transform: none
+      }
+    }
+
+    #bump {
+      transform-origin: 160px 380px
+    }
+
+    .zone {
+      cursor: pointer;
+      transition: filter .15s
+    }
+
+    .zone:hover,
+    .zone:focus-visible {
+      filter: brightness(1.12);
+      outline: none
+    }
+
+    .zone.active {
+      filter: brightness(1.15) drop-shadow(0 0 6px #ffcf6e)
+    }
+
+    .deco {
+      pointer-events: none
+    }
+
+    .badge circle {
+      transition: fill .2s
+    }
+
+    .badge {
+      pointer-events: none
+    }
+
+    .badge.pop {
+      animation: pop .4s
+    }
+
+    @keyframes pop {
+      50% {
+        transform: scale(1.35)
+      }
+    }
+
+    .badge {
+      transform-box: fill-box;
+      transform-origin: center
+    }
+
+    .eyes {
+      animation: blink 5s infinite;
+      transform-box: fill-box;
+      transform-origin: center
+    }
+
+    @keyframes blink {
+
+      0%,
+      94%,
+      100% {
+        transform: scaleY(1)
+      }
+
+      96% {
+        transform: scaleY(.1)
+      }
+    }
+
+    .wear-btn {
+      display: block;
+      margin: 10px auto 6px;
+      width: calc(100% - 8px)
+    }
+
+    .wear-btn.active {
+      background: var(--forest);
+      color: #fff
+    }
+
+    .zone .hl {
+      fill: #fff;
+      fill-opacity: 0;
+      transition: fill-opacity .15s
+    }
+
+    .zone:hover .hl,
+    .zone:focus-visible .hl {
+      fill-opacity: .12
+    }
+
+    .zone.active .hl {
+      fill-opacity: .2;
+      stroke: #ffd27a;
+      stroke-width: 4;
+      stroke-dasharray: 7 5
+    }
+
+    .legend {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-top: 10px
+    }
+
+    .lg {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+      border: 2px solid var(--line);
+      background: #fff;
+      border-radius: 10px;
+      padding: 7px 10px;
+      font: inherit;
+      font-size: 13.5px;
+      cursor: pointer;
+      color: var(--ink);
+      text-align: left
+    }
+
+    .lg:hover {
+      border-color: var(--forest-2)
+    }
+
+    .lg .lg-n {
+      font-weight: 700;
+      font-size: 12.5px;
+      color: #a85a17;
+      background: #fff3df;
+      border-radius: 999px;
+      padding: 1px 8px;
+      white-space: nowrap
+    }
+
+    .lg.full .lg-n {
+      background: #4caf7a;
+      color: #fff
+    }
+
+    .lg.none {
+      opacity: .5
+    }
+
+    .lg.active {
+      background: var(--forest);
+      border-color: var(--forest);
+      color: #fff
+    }
+
+    .lg.pop {
+      animation: pop .4s
+    }
+
+    .zpanel .pm {
+      display: none
+    }
+
+    @media (max-width:640px) {
+      .zpanel .pd {
+        display: none
+      }
+
+      .zpanel .pm {
+        display: inline
+      }
+    }
+
+    .zpanel {
+      background: var(--khaki);
+      border-radius: 14px;
+      padding: 18px;
+      min-height: 240px
+    }
+
+    .zpanel h3 {
+      margin: 0 0 4px;
+      color: var(--forest);
+      font-size: 18px
+    }
+
+    .zpanel .ztip {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 14.5px
+    }
+
+    .zpanel li label:hover {
+      background: #fff
+    }
+
+    .zpanel .empty {
+      color: var(--muted);
+      font-style: italic;
+      font-size: 14px
+    }
+
+    .zpanel.intro {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: var(--muted)
+    }
+
+    .zpanel.intro .big {
+      font-size: 42px;
+      margin-bottom: 6px;
+      animation: point 1.4s ease-in-out infinite
+    }
+
+    @keyframes point {
+      50% {
+        transform: translateX(-8px)
+      }
+    }
+
+    @media (max-width:640px) {
+      @keyframes point {
+        50% {
+          transform: translateY(-8px)
+        }
+      }
+    }
+
+    .zpanel.flash {
+      animation: flash .4s
+    }
+
+    @keyframes flash {
+      from {
+        opacity: .3;
+        transform: translateY(6px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    #grow {
+      transform-origin: 160px 380px;
+      transition: transform .5s cubic-bezier(.3, 1.6, .5, 1)
+    }
+
+    .zip {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+      opacity: 0
+    }
+
+    .pack.appear {
+      animation: appear .5s cubic-bezier(.3, 1.5, .5, 1)
+    }
+
+    .pack {
+      transform-box: fill-box;
+      transform-origin: 50% 100%
+    }
+
+    @keyframes appear {
+      from {
+        transform: scale(.55);
+        opacity: 0
+      }
+
+      to {
+        transform: none;
+        opacity: 1
+      }
+    }
+
+    #shadow {
+      transition: rx .4s
+    }
+
+    #bump.no {
+      animation: no .4s
+    }
+
+    @keyframes no {
+      20% {
+        transform: translateX(-7px)
+      }
+
+      40% {
+        transform: translateX(7px)
+      }
+
+      60% {
+        transform: translateX(-4px)
+      }
+
+      80% {
+        transform: translateX(3px)
+      }
+    }
+
+    .side-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 10px
+    }
+
+    .side-btns .btn {
+      width: 100%;
+      margin: 0
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      #grow {
+        transition: none
+      }
+
+      #bump.no {
+        animation: none
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+
+      #sway,
+      #bump.go,
+      .eyes,
+      .zpanel.intro .big,
+      .zpanel.flash,
+      .badge.pop {
+        animation: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>⛺ Τι να πάρω στην εκδρομή;</h1>
+    <p>Διάλεξε τι εκδρομή κάνεις και δες τη λίστα με όλα τα υλικά σου.</p>
+    <svg class="mtn" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 60 L0 40 L120 18 L230 42 L360 8 L480 38 L600 14 L720 44 L850 10 L980 40 L1090 20 L1200 36 L1200 60 Z"
+        fill="#f6f1e4" />
+    </svg>
+  </header>
+
+  <div class="wrap">
+    <section class="card" aria-label="Επιλογές εκδρομής">
+      <h2>1. Πες μας για την εκδρομή</h2>
+      <div class="q">
+        <span class="q-label">Πόσο διαρκεί;</span>
+        <div class="chips" data-group="dur" data-single>
+          <button class="chip" data-v="day">☀️ Ημερήσια</button>
+          <button class="chip" data-v="d2">🌙 Διήμερο</button>
+          <button class="chip" data-v="d4">⛺ Τετραήμερο</button>
+          <button class="chip" data-v="d10">🏕️ Κατασκήνωση</button>
+        </div>
+      </div>
+      <div class="q">
+        <span class="q-label">Τι εποχή είναι;</span>
+        <div class="chips" data-group="season" data-single>
+          <button class="chip" data-v="summer">🌞 Καλοκαίρι</button>
+          <button class="chip" data-v="mid">🍂 Άνοιξη / Φθινόπωρο</button>
+          <button class="chip" data-v="winter">❄️ Χειμώνας</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="packCard" aria-label="Το σακίδιο">
+      <h2>2. Πώς τα βάζω στο σακίδιο;</h2>
+      <div class="pack-grid">
+        <div>
+          <div class="stage" id="stage">
+            <svg id="packSvg" viewBox="0 0 320 400" role="group" aria-label="Σακίδιο: πάτα ένα σημείο">
+              <defs>
+                <clipPath id="dayClip">
+                  <path
+                    d="M102 358 L102 206 Q102 132 160 130 Q218 132 218 206 L218 358 Q218 372 204 372 L116 372 Q102 372 102 358 Z" />
+                </clipPath>
+                <clipPath id="bodyClip">
+                  <rect x="80" y="64" width="160" height="278" rx="48" />
+                </clipPath>
+                <linearGradient id="gBody" x1="0" x2="1">
+                  <stop offset="0" stop-color="#245a43" />
+                  <stop offset=".45" stop-color="#33765a" />
+                  <stop offset="1" stop-color="#22543f" />
+                </linearGradient>
+                <linearGradient id="gLid" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0" stop-color="#2a6049" />
+                  <stop offset="1" stop-color="#1c4736" />
+                </linearGradient>
+                <linearGradient id="gPocket" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0" stop-color="#e6914a" />
+                  <stop offset="1" stop-color="#c9702a" />
+                </linearGradient>
+                <linearGradient id="gSide" x1="0" x2="1">
+                  <stop offset="0" stop-color="#3f8a69" />
+                  <stop offset="1" stop-color="#2f7254" />
+                </linearGradient>
+                <pattern id="mesh" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                  <rect width="6" height="6" fill="url(#gSide)" />
+                  <path d="M0 0V6" stroke="#ffffff" stroke-opacity=".18" stroke-width="1.5" />
+                </pattern>
+                <linearGradient id="gMat" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0" stop-color="#f0c060" />
+                  <stop offset="1" stop-color="#d9a23e" />
+                </linearGradient>
+              </defs>
+              <ellipse id="shadow" cx="160" cy="388" rx="108" ry="8" fill="#00000016" />
+              <g id="sway">
+                <g id="grow">
+                  <g id="bump">
+                    <g id="bigWrap">
+                      <g id="packBig" class="pack">
+                        <!-- handle -->
+                        <path class="deco" d="M140 62 Q140 34 160 34 Q180 34 180 62" fill="none" stroke="#173b2c"
+                          stroke-width="9" stroke-linecap="round" />
+
+                        <!-- body -->
+                        <rect class="deco" x="80" y="64" width="160" height="278" rx="48" fill="url(#gBody)" />
+                        <g clip-path="url(#bodyClip)" class="deco">
+                          <!-- sleeping-bag compartment at the bottom -->
+                          <rect x="80" y="284" width="160" height="70" fill="#1d4a37" />
+                          <path d="M92 292 Q160 306 228 292" fill="none" stroke="#d97b29" stroke-width="2.5"
+                            stroke-dasharray="5 4" />
+                          <!-- seam between top and middle -->
+                          <path d="M80 190 Q160 200 240 190" fill="none" stroke="#173b2c" stroke-width="2"
+                            opacity=".55" />
+                        </g>
+
+                        <!-- clickable body zones (invisible until hover / tap) -->
+                        <g clip-path="url(#bodyClip)">
+                          <g class="zone" data-z="bottom" tabindex="0" role="button" aria-label="Κάτω μέρος">
+                            <title>Κάτω μέρος</title>
+                            <rect class="hl" x="80" y="286" width="160" height="60" />
+                          </g>
+                          <g class="zone" data-z="middle" tabindex="0" role="button"
+                            aria-label="Μέση, κοντά στην πλάτη">
+                            <title>Μέση – κοντά στην πλάτη</title>
+                            <rect class="hl" x="80" y="192" width="160" height="94" />
+                          </g>
+                          <g class="zone" data-z="top" tabindex="0" role="button" aria-label="Πάνω μέρος">
+                            <title>Πάνω μέρος</title>
+                            <rect class="hl" x="80" y="64" width="160" height="128" />
+                          </g>
+                        </g>
+                        <rect class="deco" x="80" y="64" width="160" height="278" rx="48" fill="none" stroke="#173b2c"
+                          stroke-width="3" />
+
+                        <!-- lid straps + buckles -->
+                        <g class="deco">
+                          <rect x="116" y="130" width="8" height="46" rx="2" fill="#173b2c" />
+                          <rect x="196" y="130" width="8" height="46" rx="2" fill="#173b2c" />
+                          <rect x="112" y="160" width="16" height="10" rx="3" fill="#e9dfc6" />
+                          <rect x="192" y="160" width="16" height="10" rx="3" fill="#e9dfc6" />
+                        </g>
+
+                        <!-- front pocket -->
+                        <g class="zone" data-z="front" tabindex="0" role="button" aria-label="Μπροστινή τσέπη">
+                          <title>Μπροστινή τσέπη</title>
+                          <rect x="118" y="214" width="84" height="54" rx="16" fill="url(#gPocket)" stroke="#a85a17"
+                            stroke-width="2.5" />
+                          <path class="deco" d="M128 226 H192" stroke="#a85a17" stroke-width="2.5"
+                            stroke-linecap="round" />
+                          <rect class="deco" x="186" y="224" width="8" height="12" rx="2" fill="#fff3df"
+                            stroke="#a85a17" stroke-width="1.5" />
+                        </g>
+
+                        <!-- lid -->
+                        <g class="zone" data-z="lid" tabindex="0" role="button" aria-label="Καπάκι">
+                          <title>Καπάκι</title>
+                          <path d="M84 132 L84 110 Q84 58 160 56 Q236 58 236 110 L236 132 Q160 148 84 132 Z"
+                            fill="url(#gLid)" stroke="#173b2c" stroke-width="3" />
+                          <path class="deco" d="M98 120 Q160 133 222 120" fill="none" stroke="#d97b29"
+                            stroke-width="2.5" stroke-dasharray="4 3" />
+                        </g>
+                        <g class="deco">
+                          <g class="eyes">
+                            <circle cx="146" cy="90" r="4.5" fill="#fff" />
+                            <circle cx="174" cy="90" r="4.5" fill="#fff" />
+                          </g>
+                          <path d="M151 102 Q160 108 169 102" fill="none" stroke="#fff" stroke-width="2.5"
+                            stroke-linecap="round" />
+                        </g>
+
+                        <!-- side pockets: water bottle sticks out of the right one -->
+                        <g class="zone" data-z="side" tabindex="0" role="button" aria-label="Πλαϊνές τσέπες">
+                          <title>Πλαϊνές τσέπες</title>
+                          <rect x="235" y="190" width="18" height="60" rx="6" fill="#7cbde0" stroke="#2d6f96"
+                            stroke-width="2" />
+                          <rect x="238" y="181" width="12" height="11" rx="3" fill="#2d6f96" />
+                          <path d="M66 236 Q66 226 76 226 H94 V304 H80 Q66 304 66 290 Z" fill="url(#mesh)"
+                            stroke="#173b2c" stroke-width="2.5" />
+                          <path d="M254 236 Q254 226 244 226 H226 V304 H240 Q254 304 254 290 Z" fill="url(#mesh)"
+                            stroke="#173b2c" stroke-width="2.5" />
+                          <path class="deco" d="M67 233 H94 M226 233 H253" stroke="#173b2c" stroke-width="3" />
+                        </g>
+
+                        <!-- sleeping mat strapped underneath -->
+                        <g class="zone" data-z="outside" tabindex="0" role="button" aria-label="Δεμένα απέξω">
+                          <title>Δεμένα απέξω</title>
+                          <rect x="70" y="338" width="180" height="34" rx="17" fill="url(#gMat)" stroke="#b3832a"
+                            stroke-width="2.5" />
+                          <path class="deco" d="M100 344 H220 M100 366 H220" stroke="#b3832a" stroke-width="1.2"
+                            opacity=".5" />
+                          <ellipse cx="243" cy="355" rx="7" ry="15" fill="#f6d690" stroke="#b3832a" stroke-width="2" />
+                          <circle class="deco" cx="243" cy="355" r="4" fill="none" stroke="#b3832a"
+                            stroke-width="1.5" />
+                          <rect class="deco" x="116" y="334" width="8" height="42" rx="2" fill="#173b2c" />
+                          <rect class="deco" x="196" y="334" width="8" height="42" rx="2" fill="#173b2c" />
+                        </g>
+
+                        <!-- zipper that closes when everything is packed -->
+                        <path class="zip deco" d="M92 126 Q160 142 228 126" pathLength="100" fill="none"
+                          stroke="#ffd27a" stroke-width="5" stroke-linecap="round" />
+                        <circle class="zippull deco" cx="92" cy="126" r="5" fill="#fff3df" stroke="#a85a17"
+                          stroke-width="2" opacity="0" />
+                      </g>
+                    </g>
+                    <g id="miniWrap" transform="translate(192,194) scale(.5)" style="display:none">
+                      <g id="packMini" class="pack zone" data-z="daypack" tabindex="0" role="button"
+                        aria-label="Σακίδιο κορυφής">
+                        <title>Σακίδιο κορυφής</title>
+                      </g>
+                    </g>
+                    <!-- ===== Daypack (σακίδιο κορυφής) ===== -->
+                    <g id="packDay" class="pack" style="display:none">
+                      <path class="deco" d="M148 134 Q148 112 160 112 Q172 112 172 134" fill="none" stroke="#173b2c"
+                        stroke-width="7" stroke-linecap="round" />
+                      <path class="deco"
+                        d="M102 358 L102 206 Q102 132 160 130 Q218 132 218 206 L218 358 Q218 372 204 372 L116 372 Q102 372 102 358 Z"
+                        fill="url(#gBody)" />
+                      <g clip-path="url(#dayClip)">
+                        <g class="zone" data-z="middle" tabindex="0" role="button"
+                          aria-label="Κάτω μέρος, κοντά στην πλάτη">
+                          <title>Κάτω μέρος – κοντά στην πλάτη</title>
+                          <rect class="hl" x="100" y="252" width="120" height="125" />
+                        </g>
+                        <g class="zone" data-z="top" tabindex="0" role="button" aria-label="Πάνω μέρος">
+                          <title>Πάνω μέρος</title>
+                          <rect class="hl" x="100" y="120" width="120" height="132" />
+                        </g>
+                      </g>
+                      <path class="deco"
+                        d="M102 358 L102 206 Q102 132 160 130 Q218 132 218 206 L218 358 Q218 372 204 372 L116 372 Q102 372 102 358 Z"
+                        fill="none" stroke="#173b2c" stroke-width="3" />
+                      <!-- zip-around main compartment -->
+                      <path class="deco" d="M110 268 L110 208 Q110 142 160 140 Q210 142 210 208 L210 268" fill="none"
+                        stroke="#d97b29" stroke-width="2.5" stroke-dasharray="5 4" />
+                      <!-- face -->
+                      <g class="deco">
+                        <g class="eyes">
+                          <circle cx="148" cy="212" r="4" fill="#fff" />
+                          <circle cx="172" cy="212" r="4" fill="#fff" />
+                        </g>
+                        <path d="M152 223 Q160 229 168 223" fill="none" stroke="#fff" stroke-width="2.5"
+                          stroke-linecap="round" />
+                      </g>
+                      <!-- small top pocket -->
+                      <g class="zone" data-z="lid" tabindex="0" role="button" aria-label="Μικρό πάνω τσεπάκι">
+                        <title>Μικρό πάνω τσεπάκι</title>
+                        <rect x="132" y="156" width="56" height="26" rx="11" fill="url(#gLid)" stroke="#173b2c"
+                          stroke-width="2.5" />
+                        <path class="deco" d="M140 166 H180" stroke="#d97b29" stroke-width="2" stroke-linecap="round" />
+                        <rect class="deco" x="176" y="162" width="6" height="9" rx="2" fill="#fff3df" />
+                      </g>
+                      <!-- front pocket -->
+                      <g class="zone" data-z="front" tabindex="0" role="button" aria-label="Μπροστινή τσέπη">
+                        <title>Μπροστινή τσέπη</title>
+                        <rect x="124" y="284" width="72" height="56" rx="15" fill="url(#gPocket)" stroke="#a85a17"
+                          stroke-width="2.5" />
+                        <path class="deco" d="M133 296 H187" stroke="#a85a17" stroke-width="2.5"
+                          stroke-linecap="round" />
+                        <rect class="deco" x="181" y="292" width="7" height="11" rx="2" fill="#fff3df" stroke="#a85a17"
+                          stroke-width="1.5" />
+                      </g>
+                      <!-- side pockets + bottle -->
+                      <g class="zone" data-z="side" tabindex="0" role="button" aria-label="Πλαϊνές τσέπες">
+                        <title>Πλαϊνές τσέπες</title>
+                        <rect x="214" y="262" width="16" height="54" rx="5" fill="#7cbde0" stroke="#2d6f96"
+                          stroke-width="2" />
+                        <rect x="217" y="254" width="10" height="10" rx="3" fill="#2d6f96" />
+                        <path d="M88 304 Q88 294 97 294 H112 V358 H100 Q88 358 88 346 Z" fill="url(#mesh)"
+                          stroke="#173b2c" stroke-width="2.5" />
+                        <path d="M232 304 Q232 294 223 294 H208 V358 H220 Q232 358 232 346 Z" fill="url(#mesh)"
+                          stroke="#173b2c" stroke-width="2.5" />
+                        <path class="deco" d="M89 301 H112 M208 301 H231" stroke="#173b2c" stroke-width="2.5" />
+                      </g>
+                      <path class="zip deco" d="M110 268 L110 208 Q110 142 160 140 Q210 142 210 208 L210 268"
+                        pathLength="100" fill="none" stroke="#ffd27a" stroke-width="5" stroke-linecap="round" />
+                      <circle class="zippull deco" cx="110" cy="268" r="5" fill="#fff3df" stroke="#a85a17"
+                        stroke-width="2" opacity="0" />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <div class="fx" id="fx"></div>
+          </div>
+          <div class="legend" id="legend"></div>
+        </div>
+
+        <div class="zpanel intro" id="zpanel" aria-live="polite">
+          <div class="big"><span class="pd">👈</span><span class="pm">👆</span></div>
+          <strong>Πάτα σε ένα σημείο του σακιδίου</strong>
+          <span style="font-size:14px;margin-top:4px">ή ένα κουμπί από κάτω, για να δεις τι μπαίνει εκεί.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" aria-label="Λίστα υλικών">
+      <h2>3. Η λίστα σου</h2>
+      <div class="progress-row">
+        <div class="bar" aria-hidden="true">
+          <div id="bar"></div>
+        </div>
+        <span class="count" id="count">0 / 0 έτοιμα</span>
+      </div>
+      <div class="tools" style="margin-top:12px">
+        <button class="btn" id="copy">📋 Αντιγραφή λίστας</button>
+        <button class="btn" id="reset">↺ Ξετσέκαρε όλα</button>
+      </div>
+      <div id="list"></div>
+      <div class="cat">
+        <h3>✏️ Δικά μου</h3>
+        <ul id="custom"></ul>
+        <form class="add" id="addForm">
+          <input id="addInput" placeholder="Πρόσθεσε κάτι που χρειάζεσαι εσύ…" maxlength="80" aria-label="Νέο υλικό">
+          <button class="btn" type="submit">Προσθήκη</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="tip">
+      <strong>💡 Συμβουλές πριν φύγεις</strong><br>
+      • Γράψε το όνομά σου σε ό,τι μπορείς (παγούρι, φακό, ρούχα).<br>
+      • Τα βαριά πράγματα μπαίνουν κοντά στην πλάτη, μέσα στο σακίδιο.<br>
+      • Βάλε τα ρούχα σε σακούλες, για να μη βραχούν αν βρέξει.<br>
+      • Η λίστα είναι ενδεικτική. Έλεγξε πάντα και με τον αρχηγό σου τι χρειάζεται η συγκεκριμένη εκδρομή.
+    </section>
+  </div>
+
+  <footer>Έτοιμος πάντα! ⚜️</footer>
+  <div class="toast" id="toast"></div>
+
+  <script>
+    // ---------- Data ----------
+    const has = (s, x) => s.extra.has(x);
+    const multi = s => s.dur !== 'day';
+    const long = s => s.dur === 'd4' || s.dur === 'd10';
+    const DAYS = { day: 1, d2: 2, d4: 4, d10: 10 };
+    // for 10 days we wash clothes, so we pack ~6 of each instead of 10
+    const perDay = (s, extra = 0) => (s.dur === 'd10' ? 6 : DAYS[s.dur]) + extra;
+    const ITEMS = [
+      // Στολή
+      { c: 'uniform', z: s => s.dur === 'day' ? 'wear' : 'top', e: '👔', t: 'Πουκάμισο', note: s => s.dur === 'day' ? '' : 'Μπαίνει πάνω πάνω στο σακίδιο' },
+      { c: 'uniform', z: 'wear', e: '👕', t: 'Μπλουζάκι' },
+      { c: 'uniform', z: 'wear', e: '🧣', t: 'Μαντήλι' },
+      { c: 'uniform', z: 'wear', e: '⭕', t: 'Κρίκος' },
+      { c: 'uniform', z: 'wear', e: '👖', t: 'Παντελόνι' },
+      { c: 'uniform', z: 'wear', e: '🪢', t: 'Ζώνη' },
+      { c: 'uniform', z: 'wear', e: '🏷️', t: 'Καρτελάκια στοιχείων περιπέτειας' },
+      // Ρούχα
+      { c: 'clothes', z: 'wear', e: '🥾', t: 'Άνετα, κλειστά παπούτσια', note: s => has(s, 'hike') ? 'Ιδανικά μποτάκια πεζοπορίας' : 'Δοκιμασμένα, όχι καινούργια' },
+      { c: 'clothes', z: 'middle', e: '🧦', t: 'Εφεδρικές κάλτσες', note: s => multi(s) ? `${perDay(s, 1)} ζευγάρια` + (s.dur === 'd10' ? ' (θα γίνει πλύσιμο)' : '') : 'Ένα ζευγάρι' },
+      { c: 'clothes', z: 'middle', e: '👕', t: 'Αλλαξιά ρούχων', note: s => multi(s) ? `${perDay(s)} μπλουζάκια και ${Math.max(2, Math.ceil(perDay(s) / 2))} παντελόνια/σορτς` + (s.dur === 'd10' ? ' (θα γίνει πλύσιμο)' : '') : 'Ένα σετ, για ώρα ανάγκης' },
+      { c: 'clothes', z: 'middle', e: '🩲', t: 'Εσώρουχα', when: multi, note: s => `${perDay(s, 1)} κομμάτια` },
+      { c: 'clothes', z: 'bottom', e: '🌙', t: 'Πιτζάμες ή ρούχα ύπνου', when: multi },
+      { c: 'clothes', z: 'wear', e: '🧢', t: 'Καπέλο για τον ήλιο', when: s => s.season !== 'winter' },
+      { c: 'clothes', z: 'top', e: '🧥', t: 'Ζακέτα ή fleece', when: s => s.season !== 'summer' || multi(s), note: s => s.season === 'summer' ? 'Τα βράδια κάνει ψύχρα' : '' },
+      { c: 'clothes', z: 'top', e: '🧥', t: 'Ζεστό μπουφάν', when: s => s.season === 'winter' || (s.season === 'mid' && (multi(s) || has(s, 'hike'))) },
+      { c: 'clothes', z: 'top', e: '🧤', t: 'Σκούφος, γάντια και κασκόλ', when: s => s.season === 'winter' },
+      { c: 'clothes', z: 'middle', e: '🩳', t: 'Ισοθερμικά', when: s => s.season === 'winter' && multi(s) },
+      { c: 'clothes', z: 'top', e: '🌂', t: 'Αδιάβροχο ή αντιανεμικό', when: s => has(s, 'rain') || s.season !== 'summer' || has(s, 'hike') },
+      { c: 'clothes', z: 'top', e: '🩱', t: 'Μαγιό', when: s => s.dur === 'd10' },
+      { c: 'clothes', z: 'outside', e: '🩴', t: 'Σαγιονάρες ή σανδάλια', when: s => has(s, 'water') || multi(s), note: s => multi(s) ? 'Για τα ντους' : '' },
+      // Ύπνος
+      { c: 'sleep', z: 'bottom', e: '🛌', t: 'Υπνόσακος', when: multi, note: s => s.season === 'winter' ? 'Χειμερινός, για χαμηλές θερμοκρασίες' : s.season === 'mid' ? 'Τριών εποχών' : 'Ελαφρύς καλοκαιρινός' },
+      { c: 'sleep', z: 'outside', e: '🧻', t: 'Υπόστρωμα (στρωματάκι)', when: multi },
+      { c: 'sleep', z: 'bottom', e: '☁️', t: 'Μικρό μαξιλαράκι', when: long },
+      // Φαγητό & νερό
+      { c: 'food', z: 'side', e: '💧', t: 'Παγούρι με νερό', note: s => (s.season === 'summer' || has(s, 'hike')) ? 'Τουλάχιστον 1,5 λίτρο' : 'Τουλάχιστον 1 λίτρο' },
+      { c: 'food', z: 'top', e: '🥪', t: 'Κολατσιό / σάντουιτς για το μεσημέρι', when: s => s.dur === 'day' },
+      { c: 'food', z: 'front', e: '🍎', t: 'Σνακ ενέργειας', note: () => 'π.χ. ξηροί καρποί, μπάρες, φρούτα' },
+      { c: 'food', z: 'middle', e: '🍽️', t: 'Πιάτο, ποτήρι, μαχαιροπίρουνα (ή καραβάνα)', when: s => multi(s) || has(s, 'cook') },
+      { c: 'food', z: 'middle', e: '🧽', t: 'Πετσετάκι κουζίνας', when: s => multi(s) || has(s, 'cook') },
+      { c: 'food', z: 'side', e: '☕', t: 'Θερμός με ζεστό ρόφημα', when: s => s.season === 'winter' },
+      // Υγιεινή
+      { c: 'hygiene', z: 'front', e: '🤧', t: 'Χαρτομάντιλα' },
+      { c: 'hygiene', z: 'front', e: '🧴', t: 'Αντισηπτικό χεριών' },
+      { c: 'hygiene', z: 'front', e: '🧴', t: 'Αντηλιακό', when: s => s.season !== 'winter' || has(s, 'water') },
+      { c: 'hygiene', z: 'front', e: '🦟', t: 'Εντομοαπωθητικό', when: s => s.season !== 'winter' },
+      { c: 'hygiene', z: 'middle', e: '🪥', t: 'Οδοντόβουρτσα και οδοντόκρεμα', when: multi },
+      { c: 'hygiene', z: 'middle', e: '🧼', t: 'Σαπούνι / αφρόλουτρο και σαμπουάν', when: multi, note: () => 'Σε μικρά μπουκαλάκια' },
+      { c: 'hygiene', z: 'middle', e: '🏖️', t: 'Πετσέτα', when: s => multi(s) || has(s, 'water'), note: () => 'Μια μικρή που στεγνώνει γρήγορα είναι ιδανική' },
+      { c: 'hygiene', z: 'middle', e: '🪮', t: 'Χτένα / βούρτσα', when: multi },
+      // Εξοπλισμός
+      { c: 'gear', z: 'wear', e: '🎒', t: 'Σακίδιο', note: s => long(s) ? 'Μεγάλο σακίδιο με ζώνη στη μέση (μαζί με το σακίδιο κορυφής)' : s.dur === 'd2' ? 'Μεσαίο ή μεγάλο σακίδιο' : 'Μικρό σακίδιο ημέρας' },
+      { c: 'gear', z: 'daypack', e: '🎒', t: 'Σακίδιο κορυφής', when: long, note: () => 'Για τις εξορμήσεις στη διάρκεια της εκδρομής' },
+      { c: 'gear', z: 'lid', e: '🔦', t: 'Φακός (ιδανικά φακός κεφαλής) με εφεδρικές μπαταρίες', when: s => multi(s) || s.season === 'winter' },
+      { c: 'gear', z: 'lid', e: '📯', t: 'Σφυρίχτρα' },
+      { c: 'gear', z: 'lid', e: '📝', t: 'Μπλοκάκι και μολύβι' },
+      { c: 'gear', z: 'lid', e: '🪢', t: 'Κορδόνι / σκοινάκι (2–3 μέτρα)', note: () => 'Για κόμβους και ό,τι χρειαστεί' },
+      { c: 'gear', z: 'front', e: '🗑️', t: 'Σακούλες για σκουπίδια', note: () => 'Δεν αφήνουμε τίποτα πίσω μας' },
+      { c: 'gear', z: 'middle', e: '🛍️', t: 'Σακούλες για τα ρούχα (αδιάβροχες)', when: s => multi(s) || has(s, 'rain') },
+      { c: 'gear', z: 'lid', e: '🕶️', t: 'Γυαλιά ηλίου', when: s => s.season === 'summer' || has(s, 'water') },
+      { c: 'gear', z: 'front', e: '📎', t: 'Μανταλάκια', when: long },
+      { c: 'gear', z: 'lid', e: '🔪', t: 'Σουγιάς', when: s => long(s) || has(s, 'cook'), note: () => 'Μόνο αν το επιτρέπει ο αρχηγός' },
+      { c: 'gear', z: 'middle', e: '🧺', t: 'Σακούλα για τα άπλυτα ρούχα', when: long },
+      { c: 'hygiene', z: 'middle', e: '🫧', t: 'Λίγο απορρυπαντικό για πλύσιμο στο χέρι', when: s => s.dur === 'd10' },
+      { c: 'clothes', z: 'outside', e: '👟', t: 'Δεύτερο ζευγάρι παπούτσια', when: s => s.dur === 'd10', note: () => 'Αν βραχούν τα πρώτα' },
+    ];
+    const CATS = {
+      uniform: '🎖️ Στολή', clothes: '👕 Ρούχα', sleep: '🛏️ Ύπνος', food: '🥪 Φαγητό & νερό',
+      hygiene: '🧼 Υγιεινή', gear: '🎒 Εξοπλισμός'
+    };
+    // pos = drop target & badge position in SVG units (viewBox 320x400)
+    const ZONES = {
+      lid: { name: '🔝 Καπάκι', short: '🔝 Καπάκι', pos: [160, 92], tip: 'Μικρά πράγματα που θες γρήγορα, χωρίς να ανοίξεις όλο το σακίδιο: φακός, σφυρίχτρα, μπλοκάκι, κορδόνι.' },
+      top: { name: '⬆️ Πάνω μέρος', short: '⬆️ Πάνω', pos: [160, 162], tip: 'Ό,τι μπορεί να χρειαστείς στη διαδρομή: αδιάβροχο, ζακέτα, κολατσιό. Έτσι δεν ξεφορτώνεις όλο το σακίδιο αν αρχίσει να βρέχει.' },
+      middle: { name: '🎯 Μέση, κοντά στην πλάτη', short: '🎯 Μέση', pos: [160, 202], tip: 'Εδώ πάνε τα πιο βαριά πράγματα, κολλητά στην πλάτη σου. Έτσι το βάρος δεν σε τραβάει προς τα πίσω και περπατάς πιο άνετα.' },
+      front: { name: '🟠 Μπροστινή τσέπη', short: '🟠 Τσέπη', pos: [160, 246], tip: 'Πράγματα για κάθε στάση: χαρτομάντιλα, αντισηπτικό, αντηλιακό, σνακ, σακούλες σκουπιδιών.' },
+      bottom: { name: '⬇️ Κάτω μέρος', short: '⬇️ Κάτω', pos: [160, 314], tip: 'Ελαφριά και ογκώδη πράγματα που θα χρειαστείς μόνο το βράδυ, όπως ο υπνόσακος. Κάνουν και «μαξιλάρι» για τα υπόλοιπα.' },
+      side: { name: '↔️ Πλαϊνές τσέπες', short: '↔️ Πλαϊνά', pos: [240, 262], tip: 'Το παγούρι, για να πίνεις νερό χωρίς να βγάζεις το σακίδιο. Βάλε ίδιο βάρος και στις δύο πλευρές.' },
+      outside: { name: '🪢 Δεμένα απέξω', short: '🪢 Απέξω', pos: [160, 355], tip: 'Ό,τι είναι ογκώδες ή μπορεί να είναι βρεγμένο. Δέσ’ τα σφιχτά, να μην κουνιούνται και να μην πιάνονται στα κλαδιά.' },
+      daypack: { name: '🎒 Σακίδιο κορυφής', short: '🎒 Κορυφής', pos: [232, 300], tip: 'Το μικρό σακίδιο για τις εξορμήσεις στη διάρκεια της εκδρομής. Κάθε φορά που φεύγετε για εξόρμηση, βάζεις μέσα παγούρι, κολατσιό, αδιάβροχο και τα απαραίτητα.' },
+      wear: { name: '🧍 Τα φοράς πάνω σου', short: '🧍 Πάνω μου', pos: [160, 200], tip: 'Αυτά δεν μπαίνουν στο σακίδιο. Τα φοράς από την ώρα που ξεκινάς!' }
+    };
+
+    // The day trip uses a small summit pack (σακίδιο κορυφής): no lid, no sleeping-bag base, no mat.
+    const DAY_ZONES = {
+      lid: { name: '🔝 Μικρό πάνω τσεπάκι', short: '🔝 Τσεπάκι', pos: [160, 169], tip: 'Μικρά πράγματα που θες γρήγορα: σφυρίχτρα, μπλοκάκι, κορδόνι.' },
+      top: { pos: [160, 236], tip: 'Ό,τι μπορεί να χρειαστείς στη διαδρομή: ζακέτα, αδιάβροχο, κολατσιό.' },
+      middle: { name: '🎯 Κάτω μέρος, κοντά στην πλάτη', pos: [160, 268], tip: 'Η αλλαξιά ρούχων και ό,τι πιο βαρύ, κολλητά στην πλάτη σου.' },
+      front: { pos: [160, 316] },
+      side: { pos: [222, 322] },
+    };
+    const isDay = () => state.dur === 'day';
+    const Z = z => {
+      if (isDay() && DAY_ZONES[z]) return { ...ZONES[z], ...DAY_ZONES[z] };
+      // with two packs the big one sits a bit to the left
+      if (long(state) && z !== 'daypack' && z !== 'wear') return { ...ZONES[z], pos: [ZONES[z].pos[0] - 34, ZONES[z].pos[1]] };
+      return ZONES[z];
+    };
+    const zoneOnPack = z => z === 'daypack' ? long(state) : (!isDay() || !(z === 'bottom' || z === 'outside'));
+
+    // ---------- State (remembered in this browser only) ----------
+    const store = {
+      get(k, d) { try { const v = localStorage.getItem('scoutpack:' + k); return v ? JSON.parse(v) : d } catch (e) { return d } },
+      set(k, v) { try { localStorage.setItem('scoutpack:' + k, JSON.stringify(v)) } catch (e) { } }
+    };
+    const state = {
+      dur: ({ night: 'd2', camp: 'd10' })[store.get('dur', 'day')] || (['day', 'd2', 'd4', 'd10'].includes(store.get('dur', 'day')) ? store.get('dur', 'day') : 'day'),
+      season: store.get('season', 'mid'),
+      extra: new Set(),
+    };
+    let checked = new Set(store.get('checked', []));
+    let custom = store.get('custom', []);
+    let activeZone = null;
+    const INTRO_HTML = document.getElementById('zpanel').innerHTML;
+    const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // ---------- Chips ----------
+    document.querySelectorAll('.chips').forEach(g => {
+      const group = g.dataset.group, single = g.hasAttribute('data-single');
+      const sync = () => g.querySelectorAll('.chip').forEach(b => {
+        const on = single ? state[group] === b.dataset.v : state.extra.has(b.dataset.v);
+        b.setAttribute('aria-pressed', on);
+      });
+      g.addEventListener('click', e => {
+        const b = e.target.closest('.chip'); if (!b) return;
+        if (single) { state[group] = b.dataset.v; store.set(group, state[group]); }
+        else { state.extra.has(b.dataset.v) ? state.extra.delete(b.dataset.v) : state.extra.add(b.dataset.v); store.set('extra', [...state.extra]); }
+        sync(); render(true);
+      });
+      sync();
+    });
+
+    function visibleItems() {
+      return ITEMS.filter(i => !i.when || i.when(state)).map(i => ({ ...i, z: typeof i.z === 'function' ? i.z(state) : i.z, n: typeof i.note === 'function' ? i.note(state) : '' }));
+    }
+    function toggleItem(t, on) {
+      on ? checked.add(t) : checked.delete(t); store.set('checked', [...checked]);
+      if (on) { const it = visibleItems().find(i => i.t === t); if (it && it.z !== 'wear') { dropItems(it.z, [it]); bumpPack(); } }
+      render();
+    }
+
+    function itemLi(i, withZone) {
+      const li = document.createElement('li'); if (checked.has(i.t)) li.className = 'done';
+      li.innerHTML = `<label><input type="checkbox" ${checked.has(i.t) ? 'checked' : ''}><span class="t"><span></span>${i.n ? '<span class="note"></span>' : ''}</span></label>`;
+      li.querySelector('.t > span').textContent = (withZone ? '' : i.e + ' ') + i.t;
+      if (i.n) li.querySelector('.note').textContent = i.n;
+      if (withZone) {
+        const b = document.createElement('button'); b.className = 'ztag'; b.type = 'button';
+        b.textContent = '📍 ' + Z(i.z).name.replace(/^\S+\s/, '');
+        b.addEventListener('click', e => { e.preventDefault(); selectZone(i.z, true); document.getElementById('packCard').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' }); });
+        li.querySelector('.t').appendChild(b);
+      }
+      li.querySelector('input').addEventListener('change', e => toggleItem(i.t, e.target.checked));
+      return li;
+    }
+
+    // ---------- Render ----------
+    let lastCounts = {};
+    function render(optionsChanged) {
+      const items = visibleItems();
+      const list = document.getElementById('list'); list.innerHTML = '';
+      for (const [key, label] of Object.entries(CATS)) {
+        const its = items.filter(i => i.c === key); if (!its.length) continue;
+        const sec = document.createElement('div'); sec.className = 'cat';
+        const done = its.filter(i => checked.has(i.t)).length;
+        sec.innerHTML = `<h3>${label} <span class="n">${done}/${its.length}</span></h3>`;
+        const ul = document.createElement('ul');
+        its.forEach(i => ul.appendChild(itemLi(i, true)));
+        sec.appendChild(ul); list.appendChild(sec);
+      }
+      renderCustom();
+      const total = items.length + custom.length;
+      const done = items.filter(i => checked.has(i.t)).length + custom.filter(c => c.done).length;
+      document.getElementById('count').textContent = `${done} / ${total} έτοιμα${total && done === total ? ' 🎉' : ''}`;
+      document.getElementById('bar').style.width = total ? (100 * done / total) + '%' : '0';
+      updatePack();
+      renderBadges(items, optionsChanged);
+      if (activeZone) renderPanel(false);
+      updateFill(done, total);
+    }
+
+    // ---------- Backpack fills up & zips closed ----------
+    let wasComplete = null;
+    function updateFill(done, total) {
+      const p = total ? done / total : 0;
+      document.getElementById('grow').style.transform = `scale(${1 + 0.07 * p},${1 + 0.03 * p})`;
+      const complete = total > 0 && done === total;
+      if (wasComplete !== null && complete !== wasComplete) complete ? zipClose() : zipOpen();
+      else if (wasComplete === null && complete) zipClose(true);
+      wasComplete = complete;
+    }
+    const curPack = () => document.getElementById(isDay() ? 'packDay' : 'packBig');
+    function zipClose(instant) {
+      const zip = curPack().querySelector('.zip'), pull = curPack().querySelector('.zippull');
+      zip.style.opacity = 1; pull.style.opacity = 1;
+      const L = zip.getTotalLength(), dur = (instant || reduced) ? 0 : 900, t0 = performance.now();
+      const step = now => {
+        const k = dur ? Math.min(1, (now - t0) / dur) : 1;
+        zip.style.strokeDashoffset = 100 * (1 - k);
+        const pt = zip.getPointAtLength(L * k); pull.setAttribute('cx', pt.x); pull.setAttribute('cy', pt.y);
+        if (k < 1) requestAnimationFrame(step); else if (!instant) celebrate();
+      };
+      requestAnimationFrame(step);
+    }
+    function zipOpen() {
+      document.querySelectorAll('.zip').forEach(z => { z.style.opacity = 0; z.style.strokeDashoffset = 100; });
+      document.querySelectorAll('.zippull').forEach(p => p.style.opacity = 0);
+    }
+    let shownPack = null, shownMini = null;
+    function updatePack() {
+      const id = isDay() ? 'packDay' : 'packBig';
+      const two = long(state), key = id + (two ? '+mini' : '');
+      document.getElementById('bigWrap').setAttribute('transform', two ? 'translate(-34,0)' : '');
+      document.getElementById('miniWrap').style.display = two ? '' : 'none';
+      document.getElementById('shadow').setAttribute('cx', two ? 150 : 160);
+      if (two && shownMini !== true && shownPack !== null && !reduced) { const m = document.getElementById('packMini'); m.classList.remove('appear'); void m.getBoundingClientRect(); m.classList.add('appear'); }
+      shownMini = two;
+      if (shownPack === id) return;
+      const changed = shownPack !== null;
+      document.getElementById('packBig').style.display = id === 'packBig' ? '' : 'none';
+      document.getElementById('packDay').style.display = id === 'packDay' ? '' : 'none';
+      document.getElementById('shadow').setAttribute('rx', id === 'packDay' ? 78 : two ? 135 : 108);
+      shownPack = id;
+      if (activeZone && !zoneOnPack(activeZone)) { activeZone = null; const p = document.getElementById('zpanel'); p.className = 'zpanel intro'; p.innerHTML = INTRO_HTML; }
+      if (activeZone) highlight(activeZone);
+      zipOpen(); if (wasComplete) zipClose(true);
+      if (changed && !reduced) { const g = document.getElementById(id); g.classList.remove('appear'); void g.getBoundingClientRect(); g.classList.add('appear'); }
+    }
+    function celebrate() {
+      toast('Το σακίδιο είναι έτοιμο! Καλή εκδρομή ⚜️');
+      if (reduced) return;
+      const fx = document.getElementById('fx'), stage = document.getElementById('stage');
+      const w = stage.clientWidth, h = stage.clientHeight;
+      const bits = ['🎉', '⭐', '⚜️', '✨', '🌲', '🏕️'];
+      for (let n = 0; n < 22; n++) {
+        const s = document.createElement('span'); s.textContent = bits[n % bits.length]; fx.appendChild(s);
+        const a = Math.random() * Math.PI * 2, r = 80 + Math.random() * 90;
+        const x0 = w / 2 - 13, y0 = h * 0.3, x1 = x0 + Math.cos(a) * r, y1 = y0 + Math.sin(a) * r - 40;
+        s.animate([
+          { transform: `translate(${x0}px,${y0}px) scale(.3)`, opacity: 1 },
+          { transform: `translate(${x1}px,${y1}px) scale(1.1) rotate(${Math.random() * 120 - 60}deg)`, opacity: 1, offset: .6 },
+          { transform: `translate(${x1}px,${y1 + 60}px) scale(.8)`, opacity: 0 }
+        ], { duration: 1400, delay: n * 25, easing: 'cubic-bezier(.2,.8,.3,1)', fill: 'forwards' }).onfinish = () => s.remove();
+      }
+      bumpPack();
+    }
+    function bumpPack(cls = 'go') {
+      if (reduced) return;
+      const b = document.getElementById('bump'); b.classList.remove('go', 'no'); void b.getBoundingClientRect(); b.classList.add(cls);
+    }
+
+    function renderBadges(items, animate) {
+      const lg = document.getElementById('legend'); lg.innerHTML = '';
+      for (const z of Object.keys(ZONES)) {
+        if (!zoneOnPack(z)) continue;
+        const info = Z(z);
+        const its = items.filter(i => i.z === z);
+        const n = its.length, done = its.filter(i => checked.has(i.t)).length;
+        const b = document.createElement('button'); b.type = 'button'; b.dataset.z = z;
+        b.className = 'lg' + (z === activeZone ? ' active' : '') + (n && done === n ? ' full' : '') + (n ? '' : ' none');
+        b.innerHTML = '<span class="lg-name"></span><span class="lg-n"></span>';
+        b.querySelector('.lg-name').textContent = info.short;
+        b.querySelector('.lg-n').textContent = n ? (done === n ? '✓' : `${done}/${n}`) : '–';
+        if (animate && lastCounts[z] !== undefined && lastCounts[z] !== n && !reduced) b.classList.add('pop');
+        lastCounts[z] = n;
+        b.addEventListener('click', () => selectZone(z));
+        lg.appendChild(b);
+      }
+    }
+
+    function renderPanel(flash) {
+      const p = document.getElementById('zpanel');
+      const info = Z(activeZone);
+      const its = visibleItems().filter(i => i.z === activeZone);
+      p.className = 'zpanel' + (flash && !reduced ? ' flash' : '');
+      p.innerHTML = `<h3></h3><p class="ztip"></p>`;
+      p.querySelector('h3').textContent = info.name;
+      p.querySelector('.ztip').textContent = info.tip;
+      if (!its.length) {
+        const e = document.createElement('p'); e.className = 'empty';
+        e.textContent = 'Για αυτή την εκδρομή δεν χρειάζεται να βάλεις κάτι εδώ.';
+        p.appendChild(e);
+      } else {
+        const ul = document.createElement('ul');
+        its.forEach(i => ul.appendChild(itemLi(i, false)));
+        p.appendChild(ul);
+      }
+    }
+
+    // ---------- Backpack interaction ----------
+    function highlight(z) {
+      document.querySelectorAll('.zone').forEach(el => { el.classList.toggle('active', el.dataset.z === z); });
+      document.querySelectorAll('.lg').forEach(el => el.classList.toggle('active', el.dataset.z === z));
+    }
+    function selectZone(z, fromList) {
+      activeZone = z;
+      highlight(z);
+      renderPanel(true);
+      if (z !== 'wear') dropItems(z);
+      bumpPack();
+    }
+    function dropItems(z, list) {
+      if (reduced) return;
+      const its = (list || visibleItems().filter(i => i.z === z)).slice(0, 6);
+      const stage = document.getElementById('stage'), svg = document.getElementById('packSvg'), fx = document.getElementById('fx');
+      const sr = stage.getBoundingClientRect(), vr = svg.getBoundingClientRect();
+      const k = vr.width / 320, ox = vr.left - sr.left, oy = vr.top - sr.top;
+      const [px, py] = Z(z).pos;
+      its.forEach((i, idx) => {
+        const s = document.createElement('span'); s.textContent = i.e; fx.appendChild(s);
+        const tx = ox + px * k - 13 + (Math.random() * 40 - 20), ty = oy + py * k - 16;
+        const sx = tx + (Math.random() * 60 - 30);
+        s.animate([
+          { transform: `translate(${sx}px,-40px) rotate(${Math.random() * 80 - 40}deg) scale(1.1)`, opacity: 0 },
+          { transform: `translate(${(sx + tx) / 2}px,${ty * 0.4}px) rotate(0deg) scale(1.1)`, opacity: 1, offset: .35 },
+          { transform: `translate(${tx}px,${ty}px) scale(.9)`, opacity: 1, offset: .8 },
+          { transform: `translate(${tx}px,${ty + 8}px) scale(.2)`, opacity: 0 }
+        ], { duration: 900, delay: idx * 110, easing: 'cubic-bezier(.3,.1,.4,1)', fill: 'forwards' }).onfinish = () => s.remove();
+      });
+    }
+    (function buildMini() {
+      const mini = document.getElementById('packMini');
+      const src = document.getElementById('packDay').cloneNode(true);
+      src.querySelectorAll('.zone').forEach(z => { z.classList.remove('zone'); z.removeAttribute('tabindex'); z.removeAttribute('role'); z.removeAttribute('aria-label'); });
+      src.querySelectorAll('title,.zip,.zippull,[clip-path]').forEach(n => n.remove());
+      src.querySelectorAll('.hl').forEach(n => n.remove());
+      mini.insertAdjacentHTML('beforeend', '<rect class="hl" x="84" y="108" width="152" height="268" rx="30"/>' + src.innerHTML);
+    })();
+    document.querySelectorAll('.zone').forEach(el => {
+      el.addEventListener('click', () => selectZone(el.dataset.z));
+      el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectZone(el.dataset.z); } });
+    });
+
+
+
+    // ---------- Custom items ----------
+    function renderCustom() {
+      const ul = document.getElementById('custom'); ul.innerHTML = '';
+      custom.forEach((c, idx) => {
+        const li = document.createElement('li'); if (c.done) li.className = 'done';
+        li.innerHTML = `<label><input type="checkbox" ${c.done ? 'checked' : ''}><span class="t"><span></span></span><button class="del" title="Διαγραφή" aria-label="Διαγραφή">×</button></label>`;
+        li.querySelector('.t > span').textContent = c.t;
+        li.querySelector('input').addEventListener('change', e => { c.done = e.target.checked; store.set('custom', custom); render(); });
+        li.querySelector('.del').addEventListener('click', e => { e.preventDefault(); custom.splice(idx, 1); store.set('custom', custom); render(); });
+        ul.appendChild(li);
+      });
+    }
+    document.getElementById('addForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const inp = document.getElementById('addInput'); const v = inp.value.trim(); if (!v) return;
+      custom.push({ t: v, done: false }); store.set('custom', custom); inp.value = ''; render();
+    });
+    document.getElementById('reset').addEventListener('click', () => {
+      checked.clear(); custom.forEach(c => c.done = false);
+      store.set('checked', []); store.set('custom', custom); render(); toast('Όλα ξετσεκαρίστηκαν');
+    });
+    document.getElementById('copy').addEventListener('click', async () => {
+      const items = visibleItems(); let out = 'Λίστα υλικών εκδρομής\n';
+      for (const [key, label] of Object.entries(CATS)) {
+        const its = items.filter(i => i.c === key); if (!its.length) continue;
+        out += `\n${label}\n` + its.map(i => `${checked.has(i.t) ? '[x]' : '[ ]'} ${i.t}${i.n ? ' (' + i.n + ')' : ''}`).join('\n') + '\n';
+      }
+      if (custom.length) out += '\n✏️ Δικά μου\n' + custom.map(c => `${c.done ? '[x]' : '[ ]'} ${c.t}`).join('\n') + '\n';
+      try { await navigator.clipboard.writeText(out); toast('Η λίστα αντιγράφηκε!'); }
+      catch (e) { toast('Δεν έγινε αντιγραφή σε αυτόν τον browser'); }
+    });
+    let tt; function toast(m) { const t = document.getElementById('toast'); t.textContent = m; t.classList.add('show'); clearTimeout(tt); tt = setTimeout(() => t.classList.remove('show'), 1800); }
+
+    render();
+  </script>
+</body>
+
+</html>
